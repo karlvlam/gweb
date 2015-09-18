@@ -25,10 +25,17 @@ func main() {
    strSlice = strSlice[0:len(strSlice)-1]
    fmt.Println(strSlice)
 
+   // create a list and add 3 nodes 
    var strList = list.New()
    strList.PushBack("One")
    printList(strList)
    strList.PushBack("Two")
+   printList(strList)
+   strList.PushBack("Three")
+   printList(strList)
+
+   // remove the last one
+   strList.Remove(strList.Back())
    printList(strList)
 }
 
