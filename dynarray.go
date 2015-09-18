@@ -28,11 +28,13 @@ func main() {
    var strList = list.New()
    strList.PushBack("One")
    printList(strList)
+   strList.PushBack("Two")
+   printList(strList)
 }
 
 func printList(l *list.List) {
     var s = ""
-    for node := l.Front(); node != nil; node = l.Next() {
+    for node := l.Front(); node != nil; node = node.Next() {
         s += node.Value.(string) + " "
     }
     fmt.Println(s)
